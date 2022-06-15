@@ -1,6 +1,6 @@
 #!/bin/bash
 
-. ./phrases.sh
+. ${0%/*}/phrases.sh
 phrase_count=${#phrase[@]}
 phrase=${phrase[`echo $((RANDOM%phrase_count))`]}
 printf '\t\e[47;30m%s\e[0m\n\n\e[1m%s\e[0m\n' \
