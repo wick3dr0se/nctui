@@ -1,8 +1,7 @@
 #!/bin/bash
 
 . "${0%/*}/phrases.sh"
-phrase_count=${#phrase[@]}
-phrase=${phrase[`echo $((RANDOM%phrase_count))`]}
+phrase=${phrase[`echo $((RANDOM%${#phrase[@]}))`]}
 printf '%s\n\n' "Typer - Check your type speed & accuracy"
 printf '\e[40;1;37m%s\e[0m\r\e[?7l' "$phrase"
 
