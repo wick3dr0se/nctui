@@ -25,4 +25,4 @@ done 2>/dev/null
 timeEnd=`date +%s`
 timer=$((timeEnd-timeStart))
 printf '\n[%s] %s characters typed in %s seconds' \
-	"$type_status" "$characters" "$timer"
+	"$type_status" "$typed_count" "$timer"
